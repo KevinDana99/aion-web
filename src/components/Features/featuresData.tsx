@@ -13,8 +13,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Creacion de app o website",
-    paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    paragraph: `Aplicaciones diseñadas para dispositivos móviles, optimizadas para Android, iOS o multiplataforma. Incluye desarrollo nativo, híbrido o con frameworks como React Native y Flutter.
+    Creación de sitios web estáticos o dinámicos, optimizados para rendimiento, accesibilidad y SEO. Puede incluir landing pages, blogs, portafolios o sitios empresariales.
+    `,
   },
   {
     id: 1,
@@ -29,7 +30,7 @@ const featuresData: Feature[] = [
     ),
     title: "Diseño y planificacion",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Creación de interfaces atractivas y funcionales, priorizando la experiencia del usuario con diseños intuitivos, accesibles y atractivos.",
   },
   {
     id: 1,
@@ -43,8 +44,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Experiencia de usuario",
-    paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    paragraph: `Mejoras en la estructura, accesibilidad y tiempos de respuesta para ofrecer una navegación fluida y sin fricciones. Evaluación de la experiencia del usuario a través de pruebas A/B, encuestas y análisis de comportamiento para optimizar la interfaz y la navegación.`,
   },
   {
     id: 1,
@@ -58,8 +58,9 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Apps 100% configurables",
-    paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    paragraph: `Desarrollo de aplicaciones altamente personalizables, donde los usuarios pueden ajustar parámetros, interfaces y funcionalidades según sus necesidades. Incluye paneles de administración intuitivos, opciones de configuración avanzada y personalización en tiempo real sin necesidad de codificación.
+
+`,
   },
   {
     id: 1,
@@ -73,8 +74,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Gestionamos tu contenido",
-    paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    paragraph: `Administramos y optimizamos tu contenido digital, asegurando una distribución eficiente y una experiencia atractiva para tus usuarios. Desde la creación y organización hasta la automatización y publicación en múltiples plataformas.`,
   },
   {
     id: 1,
@@ -88,8 +88,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Compatible entre dispositivos",
-    paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    paragraph: `Desarrollamos aplicaciones y sitios web optimizados para funcionar perfectamente en cualquier dispositivo, ya sea móvil, tablet o escritorio. Garantizamos una experiencia fluida y adaptativa con diseño responsive y tecnologías cross-platform.`,
   },
 ];
 export default featuresData;

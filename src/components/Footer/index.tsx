@@ -11,24 +11,23 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
-                          <Image
-                            src="/images/logo/logo-dark.svg"
-                            alt="logo"
-                            width={80}
-                            height={30}
-                               className="w-full dark:hidden"
-                          />
-                          <Image
-                            src="/images/logo/logo-light.svg"
-                            alt="logo"
-                            width={80}
-                            height={30}
-                         className="hidden w-full dark:block"
-                          />
+                  <Image
+                    src="/images/logo/logo-dark.svg"
+                    alt="logo"
+                    width={80}
+                    height={30}
+                    className="w-full dark:hidden"
+                  />
+                  <Image
+                    src="/images/logo/logo-light.svg"
+                    alt="logo"
+                    width={30}
+                    height={30}
+                    className="w-full"
+                  />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Innovación que conecta al mundo.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -215,10 +214,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-             
-            
-          Todos los derechos reservados a AION Technologies 2019
-
+              Todos los derechos reservados a AION Technologies 2019
             </p>
           </div>
         </div>
