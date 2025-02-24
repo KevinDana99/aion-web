@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import blogData from "./../Blog/blogData";
 import useWhatsapp from "@/hooks/useWhatsapp";
 import { heroWppMessage } from "@/examples/messages/heroMessage";
+import heroData from "./heroData";
 
 const Hero = () => {
   const { handleSendWhatsappMessage } = useWhatsapp({});
@@ -48,7 +49,7 @@ const Hero = () => {
               >
                 <MarqueeContainer style={{ left: "0px", position: "absolute" }}>
                   <Marquee speed={20} direction="right">
-                    {blogData.map((blog, index) => (
+                    {heroData.map((blog, index) => (
                       <SliderContainer key={`key-${index}`}>
                         <img src={blog.image} alt={blog.paragraph} />
                       </SliderContainer>
@@ -59,7 +60,7 @@ const Hero = () => {
                   style={{ left: "250px", position: "absolute" }}
                 >
                   <Marquee speed={20} direction="left">
-                    {blogData.map((blog, index) => (
+                    {heroData.map((blog, index) => (
                       <SliderContainer key={`key-${index}`}>
                         <img src={blog.image} alt={blog.paragraph} />
                       </SliderContainer>
@@ -71,7 +72,7 @@ const Hero = () => {
                   style={{ left: "500px", position: "absolute" }}
                 >
                   <Marquee speed={20} direction="right">
-                    {blogData.map((blog, index) => (
+                    {heroData.map((blog, index) => (
                       <SliderContainer key={`key-${index}`}>
                         <img src={blog.image} alt={blog.paragraph} />
                       </SliderContainer>

@@ -107,8 +107,8 @@ const Header = () => {
                               href={menuItem.path}
                               className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                                 usePathName === menuItem.path
-                                  ? "text-primary dark:text-white"
-                                  : " hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                  ? "text-white"
+                                  : "text-white/70 hover:text-white"
                               }`}
                             >
                               {menuItem.title}
@@ -117,7 +117,7 @@ const Header = () => {
                             <>
                               <p
                                 onClick={() => handleSubmenu(index)}
-                                className="flex cursor-pointer items-center justify-between py-2 text-base  group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                                className="flex cursor-pointer items-center justify-between py-2 text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                               >
                                 {menuItem.title}
                                 <span className="pl-3">
@@ -158,18 +158,9 @@ const Header = () => {
                   </nav>
                 </div>
                 <div className="flex items-center justify-end pr-16 lg:pr-0">
-                  <Link
-                    href="/signin"
-                    className="hidden px-7 py-3 text-base font-medium text-white hover:opacity-70 dark:text-white md:block"
-                  >
-                    Acceder
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                  >
-                    Registrarse
-                  </Link>
+     
+
+           
                   <div>
                     <ThemeToggler />
                   </div>
@@ -184,3 +175,18 @@ const Header = () => {
 };
 
 export default Header;
+
+/*
+       <Link
+                    href="/signin"
+                    className="hidden px-7 py-3 text-base font-medium text-white hover:opacity-70 dark:text-white md:block"
+                  >
+                    Acceder
+                  </Link>
+                  <Link
+                    href="/signup"
+                    className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
+                  >
+                    Registrarse
+                  </Link>
+                  */
