@@ -1,32 +1,29 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const useMediaQuery = (type: 'desktop' | 'mobile') => {
+const useMediaQuery = (type: "desktop" | "mobile" | "tablet") => {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
     const checkDeviceMatch = () => {
-      const isMobile = window.innerWidth <= 768; 
-      const isDesktop = window.innerWidth > 768;
+      const isMobile = window.innerWidth > 300 && window.innerWidth < 1366;
+      const isDesktop = window.innerWidth > 1366;
 
-      if (type === 'mobile') {
+      if (type === "mobile") {
         setMatches(isMobile);
-      } else if (type === 'desktop') {
+      } else if (type === "desktop") {
         setMatches(isDesktop);
       }
     };
 
-    
     checkDeviceMatch();
 
+    window.addEventListener("resize", checkDeviceMatch);
 
-    window.addEventListener('resize', checkDeviceMatch);
-
- 
     return () => {
-      window.removeEventListener('resize', checkDeviceMatch);
+      window.removeEventListener("resize", checkDeviceMatch);
     };
-  }, [type]); 
+  }, [type]);
 
   return matches;
 };

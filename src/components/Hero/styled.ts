@@ -22,8 +22,8 @@ export const MarqueeContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
-width: 220px;
-margin-top: 150px;
+  width: 220px;
+  margin-top: 150px;
   transform: rotate(280deg);
   margin-left: 30px;
   background-color: transparent;

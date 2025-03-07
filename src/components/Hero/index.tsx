@@ -1,13 +1,14 @@
 "use client";
 import { Gradient, MarqueeContainer, SliderContainer, Waves } from "./styled";
 import Marquee from "react-fast-marquee";
-import blogData from "./../Blog/blogData";
 import useWhatsapp from "@/hooks/useWhatsapp";
 import { heroWppMessage } from "@/examples/messages/heroMessage";
 import heroData from "./heroData";
+import useMediaQuery from "@/hooks/useMediaquery";
 
 const Hero = () => {
   const { handleSendWhatsappMessage } = useWhatsapp({});
+  const isMobile = useMediaQuery("mobile");
   return (
     <>
       <section
@@ -18,68 +19,85 @@ const Hero = () => {
           <div className="pt-24">
             <div
               className="flex flex-row "
-              style={{ justifyContent: "center" }}
+              style={{
+                justifyContent: "center",
+
+                padding: 20,
+              }}
             >
-              <div className="flex w-full flex-col items-start justify-center text-center md:w-2/5 md:text-left">
+              <div
+                className={`flex w-full flex-col items-start justify-center text-center ${!isMobile && "md:w-2/5"} md:text-left`}
+              >
                 <p className="tracking-loose w-full uppercase">
                   Queres llevar tu negocio al siguiente nivel?
                 </p>
                 <h1 className="my-4 text-5xl font-bold leading-tight">
                   Tenemos la solucion de software perfecta para vos!
                 </h1>
-                <p className="mb-8 text-2xl leading-normal">
+                <p
+                  style={{ width: "100%" }}
+                  className="text-align mb-8 text-center text-2xl leading-normal md:text-start"
+                >
                   Contactanos para que podamos asesorarte!
                 </p>
                 <button
                   onClick={() => handleSendWhatsappMessage(heroWppMessage)}
-                  className="focus:shadow-outline mx-auto my-6 transform rounded-full bg-white px-8 py-4 font-bold text-gray-800 shadow-lg transition duration-300 ease-in-out hover:scale-105 focus:outline-none lg:mx-0"
+                  className="focus:shadow-outline mx-auto my-6 transform rounded-full bg-white px-8 py-4 font-bold text-gray-800 shadow-lg transition duration-300 ease-in-out hover:scale-105 focus:outline-none md:mx-0 lg:mx-0"
                 >
                   Contactar
                 </button>
               </div>
-              <div
-                style={{
-                  position: "relative",
-                  width: "530px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  right: 250,
-                }}
-              >
-                <MarqueeContainer style={{ left: "0px", position: "absolute" }}>
-                  <Marquee speed={20} direction="right">
-                    {heroData.map((blog, index) => (
-                      <SliderContainer key={`key-${index}`}>
-                        <img src={blog.image} alt={blog.paragraph} />
-                      </SliderContainer>
-                    ))}
-                  </Marquee>
-                </MarqueeContainer>
-                <MarqueeContainer
-                  style={{ left: "250px", position: "absolute" }}
+              {isMobile ? (
+                <></>
+              ) : (
+                <div
+                  style={{
+                    position: "relative",
+                    width: "530px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    right: 250,
+                  }}
                 >
-                  <Marquee speed={20} direction="left">
-                    {heroData.map((blog, index) => (
-                      <SliderContainer key={`key-${index}`}>
-                        <img src={blog.image} alt={blog.paragraph} />
-                      </SliderContainer>
-                    ))}
-                  </Marquee>
-                </MarqueeContainer>
+                  <>
+                    <MarqueeContainer
+                      style={{ left: "100px", position: "absolute" }}
+                    >
+                      <Marquee speed={20} direction="right">
+                        {heroData.map((blog, index) => (
+                          <SliderContainer key={`key-${index}`}>
+                            <img src={blog.image} alt={blog.paragraph} />
+                          </SliderContainer>
+                        ))}
+                      </Marquee>
+                    </MarqueeContainer>
+                    <MarqueeContainer
+                      style={{ left: "360px", position: "absolute" }}
+                    >
+                      <Marquee speed={20} direction="left">
+                        {heroData.map((blog, index) => (
+                          <SliderContainer key={`key-${index}`}>
+                            <img src={blog.image} alt={blog.paragraph} />
+                          </SliderContainer>
+                        ))}
+                      </Marquee>
+                    </MarqueeContainer>
 
-                <MarqueeContainer
-                  style={{ left: "500px", position: "absolute" }}
-                >
-                  <Marquee speed={20} direction="right">
-                    {heroData.map((blog, index) => (
-                      <SliderContainer key={`key-${index}`}>
-                        <img src={blog.image} alt={blog.paragraph} />
-                      </SliderContainer>
-                    ))}
-                  </Marquee>
-                </MarqueeContainer>
-              </div>
+                    <MarqueeContainer
+                      style={{ left: "620px", position: "absolute" }}
+                    >
+                      <Marquee speed={20} direction="right">
+                        {heroData.map((blog, index) => (
+                          <SliderContainer key={`key-${index}`}>
+                            <img src={blog.image} alt={blog.paragraph} />
+                          </SliderContainer>
+                        ))}
+                      </Marquee>
+                    </MarqueeContainer>
+                  </>
+                </div>
+              )}
             </div>
           </div>
 

@@ -7,6 +7,11 @@ import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
+import { Providers } from "./providers";
+import HeaderSpace from "@/components/Header/HeaderSpace";
+import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -14,6 +19,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   return (
     <html suppressHydrationWarning lang="en">
       {/*
@@ -22,17 +31,24 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body
+        style={{ background: loading ? "#5271ff" : null }}
+        className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}
+      >
         <Providers>
-          <Header />
-          {children}
-          <Footer />
+          {loading ? (
+            <Loader />
+          ) : (
+            <>
+              <Header />
+              {children}
+              <Footer />
+            </>
+          )}
+
           <ScrollToTop />
         </Providers>
       </body>
     </html>
   );
 }
-
-import { Providers } from "./providers";import HeaderSpace from "@/components/Header/HeaderSpace";
-

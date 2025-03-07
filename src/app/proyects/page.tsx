@@ -3,36 +3,39 @@ import blogData from "@/components/Blog/blogData";
 import Gallery from "@/components/Gallery";
 import HeaderSpace from "@/components/Header/HeaderSpace";
 import { Metadata } from "next";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog Page | Free Next.js Template for Startup and SaaS",
   description: "This is Blog Page for Startup Nextjs Template",
 };
 
-const Blog = () => {
+const Proyects = () => {
   return (
     <>
-   <HeaderSpace/>
+      <HeaderSpace />
 
-      <section className="pb-[120px] pt-[120px]">
-        <div className="container">
-          
-            <Gallery>
-            {blogData.map((blog) =>  
-                <div className="w-full" >
-                  <a href={blog.image} data-src={blog.image} className="gallery-link">
-              <SingleBlog blog={blog} />
-              </a>
-              
-            </div>
-            )} 
-      </Gallery>
-      
-          </div>|
+      <section className="pb-[120px] pt-[50px]">
+        <div className="container" id="anchor-tag">
+          <Gallery>
+            {blogData.map((blog, index) => (
+              <div className="w-full" key={`${index}-key`}>
+                <a
+                  href={blog.image}
+                  data-src={blog.image}
+                  className="gallery-link"
+                >
+                  <SingleBlog blog={blog} />
+                </a>
+              </div>
+            ))}
+          </Gallery>
+        </div>
+        |
       </section>
     </>
   );
 };
 
-export default Blog;
+export default Proyects;
