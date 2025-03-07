@@ -35,8 +35,9 @@ const Slider = ({children}: {children: ReactNode[]}) => {
     modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
     className="mySwiper"
   >
-    {children.map((children) => {
-  return <SwiperSlide>
+    {children.map((children,index) => {
+  return <SwiperSlide key={index + 'key'
+  }>
 {children}
 </SwiperSlide>
     })}

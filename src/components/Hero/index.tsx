@@ -5,6 +5,7 @@ import useWhatsapp from "@/hooks/useWhatsapp";
 import { heroWppMessage } from "@/examples/messages/heroMessage";
 import heroData from "./heroData";
 import useMediaQuery from "@/hooks/useMediaquery";
+import Image from "next/image";
 
 const Hero = () => {
   const { handleSendWhatsappMessage } = useWhatsapp({});
@@ -67,7 +68,7 @@ const Hero = () => {
                       <Marquee speed={20} direction="right">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <img src={blog.image} alt={blog.paragraph} />
+                            <Image src={blog.image} alt={blog.paragraph} />
                           </SliderContainer>
                         ))}
                       </Marquee>
@@ -78,7 +79,7 @@ const Hero = () => {
                       <Marquee speed={20} direction="left">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <img src={blog.image} alt={blog.paragraph} />
+                            <Image src={blog.image} alt={blog.paragraph} />
                           </SliderContainer>
                         ))}
                       </Marquee>
@@ -90,7 +91,7 @@ const Hero = () => {
                       <Marquee speed={20} direction="right">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <img src={blog.image} alt={blog.paragraph} />
+                            <Image src={blog.image} alt={blog.paragraph} />
                           </SliderContainer>
                         ))}
                       </Marquee>

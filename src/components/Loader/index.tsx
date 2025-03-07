@@ -2,6 +2,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Ball, Container, LoaderBar, Title } from "./styled";
 import "./styles.css";
+import Image from "next/image";
 const Loader = () => {
   const [loader, setLoader] = useState(true);
 
@@ -11,7 +12,7 @@ const Loader = () => {
   return (
     <>
       <div className="loaderContainer">
-        <img src="images/loaders/loader.gif"></img>
+        <Image src="images/loaders/loader.gif" alt="logo-aion"></Image>
         <div className="loaderBar">
           <Ball index={1}></Ball>
           <Ball index={2}></Ball>
