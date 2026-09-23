@@ -1,12 +1,19 @@
 import { Blog } from "@/types/blog";
 
-const heroData: Blog[] = [
+type HeroSlide = Blog & {
+  width: number;
+  height: number;
+};
+
+const heroData: HeroSlide[] = [
   {
     id: 1,
     title: "Best UI components for modern websites",
     paragraph:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/hero/screen2.png",
+    width: 300,
+    height: 640,
     author: {
       name: "Samuyl Joshi",
       image: "/images/blog/author-01.png",
@@ -21,6 +28,8 @@ const heroData: Blog[] = [
     paragraph:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/hero/screen3.png",
+    width: 398,
+    height: 835,
     author: {
       name: "Samuyl Joshi",
       image: "/images/blog/author-01.png",
@@ -35,6 +44,8 @@ const heroData: Blog[] = [
     paragraph:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
     image: "/images/hero/screen4.png",
+    width: 290,
+    height: 631,
     author: {
       name: "Samuyl Joshi",
       image: "/images/blog/author-01.png",

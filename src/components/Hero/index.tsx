@@ -68,7 +68,12 @@ const Hero = () => {
                       <Marquee speed={20} direction="right">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <Image src={blog.image} alt={blog.paragraph} />
+                            <Image
+                              src={blog.image}
+                              alt={blog.paragraph}
+                              width={blog.width}
+                              height={blog.height}
+                            />
                           </SliderContainer>
                         ))}
                       </Marquee>
@@ -79,7 +84,12 @@ const Hero = () => {
                       <Marquee speed={20} direction="left">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <Image src={blog.image} alt={blog.paragraph} />
+                            <Image
+                              src={blog.image}
+                              alt={blog.paragraph}
+                              width={blog.width}
+                              height={blog.height}
+                            />
                           </SliderContainer>
                         ))}
                       </Marquee>
@@ -91,7 +101,12 @@ const Hero = () => {
                       <Marquee speed={20} direction="right">
                         {heroData.map((blog, index) => (
                           <SliderContainer key={`key-${index}`}>
-                            <Image src={blog.image} alt={blog.paragraph} />
+                            <Image
+                              src={blog.image}
+                              alt={blog.paragraph}
+                              width={blog.width}
+                              height={blog.height}
+                            />
                           </SliderContainer>
                         ))}
                       </Marquee>
@@ -109,7 +124,7 @@ const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <g stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+              <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g
                   transform="translate(-2.000000, 44.000000)"
                   className="fill-current text-white dark:text-gray-dark"

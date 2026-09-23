@@ -16,16 +16,16 @@ const Header = () => {
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
   useEffect(() => {
+    const handleStickyNavbar = () => {
+      setSticky(window.scrollY >= 80);
+    };
+
+    handleStickyNavbar();
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);

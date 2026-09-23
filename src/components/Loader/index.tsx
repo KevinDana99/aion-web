@@ -12,13 +12,20 @@ const Loader = () => {
   return (
     <>
       <div className="loaderContainer">
-        <Image src="images/loaders/loader.gif" alt="logo-aion"></Image>
+        <Image
+          src="/images/loaders/loader.gif"
+          alt="Logo animado de AION"
+          width={500}
+          height={500}
+          unoptimized
+          priority
+        />
         <div className="loaderBar">
-          <Ball index={1}></Ball>
-          <Ball index={2}></Ball>
-          <Ball index={3}></Ball>
-          <Ball index={4}></Ball>
-          <Ball index={5}></Ball>
+          <Ball $index={1}></Ball>
+          <Ball $index={2}></Ball>
+          <Ball $index={3}></Ball>
+          <Ball $index={4}></Ball>
+          <Ball $index={5}></Ball>
         </div>
 
         <span className="title">Estamos cargando el sitio para ti</span>

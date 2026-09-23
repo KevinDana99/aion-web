@@ -1,12 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "swiperjs.com"],
     remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "3000",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "swiperjs.com",
+        pathname: "/**",
+      },
       {
         protocol: "https",
         hostname: "cdn.sanity.io",
-        port: "",
+        pathname: "/**",
       },
     ],
   },

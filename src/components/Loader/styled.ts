@@ -32,13 +32,13 @@ export const LoaderBar = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const Ball = styled.div<{ index: number }>`
+export const Ball = styled.div<{ $index: number }>`
   margin-left: 10px;
   width: 10px;
   height: 10px;
   border-radius: 100%;
   animation: ${LoaderAnimation} + 2.5s ease infinite;
-  animation-delay: ${({ index }) => index / 2}s;
+  animation-delay: ${({ $index }) => $index / 2}s;
 `;
 
 export const Title = styled.span`

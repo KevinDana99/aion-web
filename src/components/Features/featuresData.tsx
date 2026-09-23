@@ -18,7 +18,7 @@ const featuresData: Feature[] = [
     `,
   },
   {
-    id: 1,
+    id: 2,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -33,7 +33,7 @@ const featuresData: Feature[] = [
       "Creación de interfaces atractivas y funcionales, priorizando la experiencia del usuario con diseños intuitivos, accesibles y atractivos.",
   },
   {
-    id: 1,
+    id: 3,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -47,7 +47,7 @@ const featuresData: Feature[] = [
     paragraph: `Mejoras en la estructura, accesibilidad y tiempos de respuesta para ofrecer una navegación fluida y sin fricciones. Evaluación de la experiencia del usuario a través de pruebas A/B, encuestas y análisis de comportamiento para optimizar la interfaz y la navegación.`,
   },
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
         <path
@@ -63,7 +63,7 @@ const featuresData: Feature[] = [
 `,
   },
   {
-    id: 1,
+    id: 5,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
     paragraph: `Administramos y optimizamos tu contenido digital, asegurando una distribución eficiente y una experiencia atractiva para tus usuarios. Desde la creación y organización hasta la automatización y publicación en múltiples plataformas.`,
   },
   {
-    id: 1,
+    id: 6,
     icon: (
       <svg width="40" height="45" viewBox="0 0 40 45" className="fill-current">
         <path
